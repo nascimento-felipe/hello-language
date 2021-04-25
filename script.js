@@ -8,9 +8,9 @@ document
 
     if (name.value == "ademiro") {
       if (password.value == "hu3hu3") {
-        return alert("Top, entrou");
+        document.querySelector("#welcome-message").className = "texto-welcome";
 
-        // agora ele tem que ir pra página de "hello pessoa" na língua dela
+        return alert("Top, entrou");
       } else {
         password.value = "";
         return alert("The password is wrong!");
@@ -20,4 +20,16 @@ document
       password.value = "";
       return alert("The name is wrong!");
     }
+  });
+
+document
+  .querySelector("#button-logout")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+
+    document.querySelector("#name").value = "";
+    document.querySelector("#password").value = "";
+
+    document.querySelector("#welcome-message").className =
+      "texto-welcome-hidden";
   });

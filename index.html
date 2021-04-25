@@ -13,14 +13,24 @@
       <h1>Login</h1>
       <form>
         <label for="name">Nome:</label>
-        <input type="text" name="name" id="name" />
+        <input type="text" name="name" id="name" placeholder="try 'ademiro'" />
 
         <label for="password">Senha:</label>
-        <input type="password" name="password" id="password" />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="try 'hu3hu3'"
+        />
 
-        <button type="submit" id="button-submit">Entrar</button>
+        <button type="submit" id="button-submit">Login</button>
+        <button id="button-logout">Logout</button>
       </form>
     </section>
+
+    <div id="welcome-message" class="texto-welcome-hidden">
+      <p></p>
+    </div>
   </body>
   <script src="script.js"></script>
 </html>
